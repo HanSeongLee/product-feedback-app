@@ -1,9 +1,9 @@
-import React, {useCallback, useState} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import styles from './style.module.scss';
 import cn from 'classnames';
 import ArrowDownIcon from '/public/icons/icon-arrow-down.svg';
 
-const Select = ({ label, options, defaultValue, variants='normal' }) => {
+const Select = ({ label, options, defaultValue, onChange, variants='normal' }) => {
     const [selectedOption, setSelectedOption] = useState(defaultValue);
     const [open, setOpen] = useState(false);
 
@@ -13,6 +13,16 @@ const Select = ({ label, options, defaultValue, variants='normal' }) => {
 
     const onSelectOption = useCallback((option) => {
         setSelectedOption(option);
+
+        if (onChange) {
+            onChange(option);
+        }
+    }, [onChange]);
+
+    useEffect(() => {
+        if (onChange && defaultValue) {
+            onChange(defaultValue);
+        }
     }, []);
 
     return (
