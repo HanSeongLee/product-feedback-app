@@ -1,0 +1,14 @@
+@import "styles/utils";
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -8px;
+
+  .charactersLeft {
+    @include body3;
+    font-weight: normal;
+    color: #647196;
+  }
+}

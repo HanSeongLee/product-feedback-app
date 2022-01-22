@@ -10,4 +10,8 @@
   background: #F7F8FD;
   border-radius: 5px;
   padding: 16px;
+
+  &::placeholder {
+    color: #8C92B3;
+  }
 }

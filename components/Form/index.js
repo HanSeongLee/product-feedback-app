@@ -6,6 +6,7 @@ const Form = ({ icon, title, children, ...props }) => {
         <form className={styles.form}
               style={{
                   '--icon': `url("${icon}")`,
+                  'padding-top': icon ? '44px' : '24px',
               }}
               {...props}
         >
