@@ -39,6 +39,10 @@
     @include buttonBackground(#3A4374, #656EA3);
   }
 
+  &.info {
+    @include buttonBackground(#4661E6, #7C91F9);
+  }
+
   &.link {
     background: transparent;
     padding: 0;
