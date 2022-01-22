@@ -1,0 +1,19 @@
+@import "styles/utils";
+
+.inputField {
+  @include body3;
+
+  .label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    margin-bottom: 3px;
+    color: #3A4374;
+
+    .description {
+      font-weight: normal;
+      margin-bottom: 24px;
+      color: #647196;
+    }
+  }
+}
