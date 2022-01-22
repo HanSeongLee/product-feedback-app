@@ -43,6 +43,10 @@
     @include buttonBackground(#4661E6, #7C91F9);
   }
 
+  &.danger {
+    @include buttonBackground(#D73737, #E98888);
+  }
+
   &.link {
     background: transparent;
     padding: 0;

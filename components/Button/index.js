@@ -8,6 +8,7 @@ const Button = ({ children, variants, icon, ...props }) => {
             [styles.primary]: variants === 'primary',
             [styles.secondary]: variants === 'secondary',
             [styles.info]: variants === 'info',
+            [styles.danger]: variants === 'danger',
             [styles.link]: variants === 'link',
         })}
                 {...props}
