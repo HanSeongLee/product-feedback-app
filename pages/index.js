@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Header from "../components/Header";
+import TopBar from "../components/TopBar";
 
 export default function Home() {
   return (
@@ -55,6 +56,7 @@ export default function Home() {
 
       <main>
         <Header />
+        <TopBar />
       </main>
     </>
   )
