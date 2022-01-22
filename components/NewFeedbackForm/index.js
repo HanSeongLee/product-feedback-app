@@ -7,29 +7,7 @@ import Input from "../Input";
 import TextArea from "../TextArea";
 import Select from "../Select";
 import {Controller, useForm} from 'react-hook-form';
-
-const categories = [
-    {
-        label: 'Feature',
-        value: 'feature',
-    },
-    {
-        label: 'UI',
-        value: 'ui',
-    },
-    {
-        label: 'UX',
-        value: 'ux',
-    },
-    {
-        label: 'Enhancement',
-        value: 'enhancement',
-    },
-    {
-        label: 'Bug',
-        value: 'bug',
-    },
-];
+import categories from '../../data/categories.json';
 
 const NewFeedbackForm = ({ onSubmit, onCancel }) => {
     const {register, control, handleSubmit} = useForm();

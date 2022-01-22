@@ -83,6 +83,7 @@
     opacity: 0;
     transform-origin: top;
     transition: opacity 0.3s, transform 0.3s;
+    z-index: 1;
 
     .option {
       position: relative;
