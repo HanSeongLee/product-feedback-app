@@ -1,0 +1,79 @@
+@import "styles/utils";
+
+.comment {
+  .header {
+    display: flex;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 16px;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .userInfo {
+      @include body3;
+      flex: 1;
+
+      .name {
+        font-weight: bold;
+        color: #3A4374;
+      }
+
+      .username {
+        font-weight: normal;
+        color: #647196;
+      }
+    }
+
+    .replyButtonWrapper {
+      color: #4661E6;
+    }
+  }
+
+  --reply-gap: 24px;
+
+  .body {
+    @include body3;
+    font-weight: normal;
+    color: #647196;
+
+    > article {
+      padding-top: var(--reply-gap);
+      padding-left: 23px;
+      border-left: 1px solid rgba(100, 113, 150, 0.1);
+
+      &:first-child {
+        position: relative;
+        border-left: none;
+
+        &::before {
+          position: absolute;
+          top: var(--reply-gap);
+          left: 0;
+          width: 1px;
+          height: calc(100% - var(--reply-gap));
+          content: "";
+          background: rgba(100, 113, 150, 0.1);
+        }
+      }
+
+      &:last-child {
+        position: relative;
+        border-left: none;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1px;
+          height: calc(var(--reply-gap) + 20px);
+          content: "";
+          background: rgba(100, 113, 150, 0.1);
+        }
+      }
+    }
+  }
+}
