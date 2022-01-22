@@ -4,6 +4,8 @@
   @include body3;
   font-weight: bold;
   color: #F2F4FE;
+  display: flex;
+  align-items: center;
   background: transparent;
   border: none;
   border-radius: 10px;
@@ -14,12 +16,28 @@
     transition: background 0.3s;
   }
 
+  .icon {
+    margin-right: 16px;
+  }
+
   &.primary {
     background: #AD1FEA;
 
     @include media(">desktop") {
       &:hover {
         background: #C75AF6;
+      }
+    }
+  }
+
+  &.link {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+
+    @include media(">desktop") {
+      &:hover .children {
+        text-decoration: underline;
       }
     }
   }
