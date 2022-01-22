@@ -3,8 +3,8 @@ import styles from './style.module.scss';
 import ArrowUpIcon from '/public/icons/icon-arrow-up.svg';
 import CommentIcon from '/public/icons/icon-comments.svg';
 
-const FeedbackCard = ({ title, description, categories, upvoteCount,
-                          commentCount }) => {
+const FeedbackCard = ({ id, title, description, categories,
+                          upvoteCount, commentCount, onUpvote }) => {
     return (
         <article className={styles.card}>
             <div className={styles.body}>
@@ -25,7 +25,9 @@ const FeedbackCard = ({ title, description, categories, upvoteCount,
                 </div>
             </div>
             <div className={styles.footer}>
-                <button className={styles.upvoteButton}>
+                <button className={styles.upvoteButton}
+                        onClick={_ => onUpvote(id)}
+                >
                     <ArrowUpIcon className={styles.arrowUpIcon} /> {upvoteCount}
                 </button>
                 <span className={styles.commentCount}>
