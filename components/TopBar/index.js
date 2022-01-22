@@ -2,6 +2,7 @@ import React from "react";
 import styles from './style.module.scss';
 import Select from "../Select";
 import Button from "../Button";
+import Link from 'next/link';
 
 const sortByOptions = [
     {
@@ -29,9 +30,13 @@ const TopBar = () => {
                     options={sortByOptions}
                     defaultValue={sortByOptions[0]}
             />
-            <Button variants={'primary'}>
-                + Add Feedback
-            </Button>
+            <Link href={'/new'}>
+                <a>
+                    <Button variants={'primary'}>
+                        + Add Feedback
+                    </Button>
+                </a>
+            </Link>
         </div>
     );
 };
