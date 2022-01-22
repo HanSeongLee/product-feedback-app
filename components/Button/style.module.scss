@@ -5,6 +5,7 @@
   font-weight: bold;
   color: #F2F4FE;
   display: flex;
+  justify-content: center;
   align-items: center;
   background: transparent;
   border: none;
@@ -20,14 +21,22 @@
     margin-right: 16px;
   }
 
-  &.primary {
-    background: #AD1FEA;
+  @mixin buttonBackground($default, $hover) {
+    background: $default;
 
     @include media(">desktop") {
       &:hover {
-        background: #C75AF6;
+        background: $hover;
       }
     }
+  }
+
+  &.primary {
+    @include buttonBackground(#AD1FEA, #C75AF6);
+  }
+
+  &.secondary {
+    @include buttonBackground(#3A4374, #656EA3);
   }
 
   &.link {

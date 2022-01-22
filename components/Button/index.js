@@ -6,6 +6,7 @@ const Button = ({ children, variants, icon, ...props }) => {
     return (
         <button className={cn(styles.button, {
             [styles.primary]: variants === 'primary',
+            [styles.secondary]: variants === 'secondary',
             [styles.link]: variants === 'link',
         })}
                 {...props}
