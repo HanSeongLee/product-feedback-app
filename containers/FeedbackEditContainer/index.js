@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 import EditFeedbackForm from "../../components/EditFeedbackForm";
 import {useRouter} from "next/router";
 
-const FeedbackEditContainer = (props) => {
+const FeedbackEditContainer = ({categories, ...props}) => {
     const router = useRouter();
 
     const onSubmit = useCallback((data) => {
@@ -21,6 +21,12 @@ const FeedbackEditContainer = (props) => {
 
     return (
         <EditFeedbackForm {...props}
+                          categories={categories?.map(({id, name}) => {
+                              return {
+                                  label: name,
+                                  value: id,
+                              };
+                          })}
                           onSubmit={onSubmit}
                           onCancel={onCancel}
                           onDelete={onDelete}

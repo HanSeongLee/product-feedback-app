@@ -31,7 +31,7 @@ const TopBar = () => {
                     defaultValue={sortByOptions[0]}
                     variants={'small'}
             />
-            <Link href={'/new'}>
+            <Link href={'/feedbacks/new'}>
                 <a>
                     <Button variants={'primary'}>
                         + Add Feedback

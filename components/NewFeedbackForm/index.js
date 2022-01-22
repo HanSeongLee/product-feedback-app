@@ -7,9 +7,8 @@ import Input from "../Input";
 import TextArea from "../TextArea";
 import Select from "../Select";
 import {Controller, useForm} from 'react-hook-form';
-import categories from '../../data/categories.json';
 
-const NewFeedbackForm = ({ onSubmit, onCancel }) => {
+const NewFeedbackForm = ({ categories, onSubmit, onCancel }) => {
     const {register, control, handleSubmit} = useForm();
 
     return (
@@ -50,6 +49,7 @@ const NewFeedbackForm = ({ onSubmit, onCancel }) => {
                     Add Feedback
                 </Button>
                 <Button variants={'secondary'}
+                        type={'button'}
                         onClick={onCancel}
                 >
                     Cancel

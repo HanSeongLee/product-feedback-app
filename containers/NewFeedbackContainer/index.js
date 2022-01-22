@@ -2,7 +2,7 @@ import React, {useCallback} from "react";
 import NewFeedbackForm from "../../components/NewFeedbackForm";
 import {useRouter} from "next/router";
 
-const NewFeedbackContainer = () => {
+const NewFeedbackContainer = ({ categories }) => {
     const router = useRouter();
 
     const onSubmit = useCallback((data) => {
@@ -15,7 +15,13 @@ const NewFeedbackContainer = () => {
     }, [router]);
 
     return (
-        <NewFeedbackForm onSubmit={onSubmit}
+        <NewFeedbackForm categories={categories?.map(({id, name}) => {
+            return {
+                label: name,
+                value: id,
+            };
+        })}
+                         onSubmit={onSubmit}
                          onCancel={onCancel}
         />
     );

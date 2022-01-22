@@ -1,22 +1,22 @@
 [
   {
-    "label": "Feature",
-    "value": "feature"
+    "id": 1,
+    "name": "UI"
   },
   {
-    "label": "UI",
-    "value": "ui"
+    "id": 2,
+    "name": "UX"
   },
   {
-    "label": "UX",
-    "value": "ux"
+    "id": 3,
+    "name": "Enhancement"
   },
   {
-    "label": "Enhancement",
-    "value": "enhancement"
+    "id": 4,
+    "name": "Bug"
   },
   {
-    "label": "Bug",
-    "value": "bug"
+    "id": 5,
+    "name": "Feature"
   }
 ]

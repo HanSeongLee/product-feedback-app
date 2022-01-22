@@ -7,12 +7,11 @@ import {Controller, useForm} from "react-hook-form";
 import Select from "../Select";
 import TextArea from "../TextArea";
 import Button from "../Button";
-import categories from '../../data/categories.json';
 import status from '../../data/status.json';
 
 const EditFeedbackForm = ({
                               title, category, status: currentStatus, description,
-                              onSubmit, onCancel, onDelete
+                              categories, onSubmit, onCancel, onDelete
                           }) => {
     const {register, control, handleSubmit} = useForm();
 

@@ -3,8 +3,9 @@ import Head from "../../../../components/Head";
 import GoBackButton from "../../../../components/GoBackButton";
 import React from "react";
 import FeedbackEditContainer from "../../../../containers/FeedbackEditContainer";
+import {findAll} from "../../../../lib/api/categories";
 
-const FeedbackEditPage = ({ feedback }) => {
+const FeedbackEditPage = ({ feedback, categories }) => {
     return (
         <>
             <Head title={'Edit'} />
@@ -12,14 +13,17 @@ const FeedbackEditPage = ({ feedback }) => {
             <main className={styles.container}>
                 <GoBackButton/>
 
-                <FeedbackEditContainer {...feedback} />
+                <FeedbackEditContainer {...feedback}
+                                       categories={categories}
+                />
             </main>
         </>
     );
 };
 
-export const getServerSideProps = (context) => {
+export const getServerSideProps = async (context) => {
     const {feedbackId: id} = context.query;
+    const categories = await findAll();
 
     const feedback = {
         id: 1,
@@ -38,6 +42,7 @@ export const getServerSideProps = (context) => {
     return {
         props: {
             feedback,
+            categories,
         },
     };
 };

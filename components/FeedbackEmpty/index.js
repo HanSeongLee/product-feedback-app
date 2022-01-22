@@ -17,7 +17,7 @@ const FeedbackEmpty = () => {
                 Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our
                 app.
             </p>
-            <Link href={'/new'}>
+            <Link href={'/feedbacks/new'}>
                 <a>
                     <Button variants={'primary'}>
                         + Add Feedback
