@@ -29,6 +29,7 @@ const TopBar = () => {
             <Select label={'Sort by'}
                     options={sortByOptions}
                     defaultValue={sortByOptions[0]}
+                    variants={'small'}
             />
             <Link href={'/new'}>
                 <a>
