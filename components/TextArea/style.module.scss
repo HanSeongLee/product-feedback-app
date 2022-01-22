@@ -1,0 +1,13 @@
+@import "styles/utils";
+
+.textarea {
+  @include body3;
+  font-weight: normal;
+  color: #3A4374;
+  min-height: 120px;
+  border: none;
+  resize: none;
+  background: #F7F8FD;
+  border-radius: 5px;
+  padding: 16px;
+}
