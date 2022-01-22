@@ -1,0 +1,26 @@
+@import "styles/utils";
+
+.button {
+  @include body3;
+  font-weight: bold;
+  color: #F2F4FE;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 10.5px 16px;
+  cursor: pointer;
+
+  @include media(">desktop") {
+    transition: background 0.3s;
+  }
+
+  &.primary {
+    background: #AD1FEA;
+
+    @include media(">desktop") {
+      &:hover {
+        background: #C75AF6;
+      }
+    }
+  }
+}
