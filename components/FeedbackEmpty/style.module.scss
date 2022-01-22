@@ -1,0 +1,26 @@
+@import "styles/utils";
+
+.card {
+  background: #FFFFFF;
+  border-radius: 10px;
+  padding: 76px 24px;
+  text-align: center;
+
+  .emptyImage {
+    width: 102px;
+    margin-bottom: 39px;
+  }
+
+  .title {
+    @include h3;
+    color: #3A4374;
+    margin-bottom: 14px;
+  }
+
+  .description {
+    @include body3;
+    font-weight: normal;
+    color: #647196;
+    margin-bottom: 24px;
+  }
+}
