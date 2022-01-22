@@ -6,6 +6,7 @@ import FeedbackCommentContainer from "../../../containers/FeedbackCommentContain
 import FeedbackDetailContainer from "../../../containers/FeedbackDetailContainer";
 import Button from "../../../components/Button";
 import AddCommentContainer from "../../../containers/AddCommentContainer";
+import Link from 'next/link';
 
 const FeedbackDetailPage = ({ id, feedback }) => {
     return (
@@ -15,9 +16,14 @@ const FeedbackDetailPage = ({ id, feedback }) => {
             <main className={styles.container}>
                 <div className={styles.menu}>
                     <GoBackButton/>
-                    <Button variants={'info'}>
-                        Edit Feedback
-                    </Button>
+
+                    <Link href={`/feedbacks/${id}/edit`}>
+                        <a>
+                            <Button variants={'info'}>
+                                Edit Feedback
+                            </Button>
+                        </a>
+                    </Link>
                 </div>
 
                 <FeedbackDetailContainer {...feedback} />
@@ -28,7 +34,7 @@ const FeedbackDetailPage = ({ id, feedback }) => {
                     </h2>
                     <FeedbackCommentContainer comments={feedback?.comments}/>
                 </section>
-                <AddCommentContainer id={id} />
+                <AddCommentContainer id={id}/>
             </main>
         </>
     );
