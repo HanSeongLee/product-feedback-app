@@ -3,9 +3,10 @@ import Head from "../../../../components/Head";
 import GoBackButton from "../../../../components/GoBackButton";
 import React from "react";
 import FeedbackEditContainer from "../../../../containers/FeedbackEditContainer";
-import {findAll} from "../../../../lib/api/categories";
+import * as CategoryAPI from "../../../../lib/api/categories";
+import * as StatusAPI from "../../../../lib/api/status";
 
-const FeedbackEditPage = ({ feedback, categories }) => {
+const FeedbackEditPage = ({ feedback, categories, status }) => {
     return (
         <>
             <Head title={'Edit'} />
@@ -15,6 +16,7 @@ const FeedbackEditPage = ({ feedback, categories }) => {
 
                 <FeedbackEditContainer {...feedback}
                                        categories={categories}
+                                       statusList={status}
                 />
             </main>
         </>
@@ -23,18 +25,19 @@ const FeedbackEditPage = ({ feedback, categories }) => {
 
 export const getServerSideProps = async (context) => {
     const {feedbackId: id} = context.query;
-    const categories = await findAll();
+    const categories = await CategoryAPI.findAll();
+    const status = await StatusAPI.findAll();
 
     const feedback = {
         id: 1,
         title: 'Add tags for solutions',
         description: 'Easier to search for solutions based on a specific stack.',
         category: {
-            id: 1,
+            id: 3,
             name: 'Enhancement',
         },
         status: {
-            id: 1,
+            id: 2,
             name: 'Planned'
         },
     };
@@ -43,6 +46,7 @@ export const getServerSideProps = async (context) => {
         props: {
             feedback,
             categories,
+            status,
         },
     };
 };

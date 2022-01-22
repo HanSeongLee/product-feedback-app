@@ -11,7 +11,8 @@ import status from '../../data/status.json';
 
 const EditFeedbackForm = ({
                               title, category, status: currentStatus, description,
-                              categories, onSubmit, onCancel, onDelete
+                              categories, statusList, onSubmit, onCancel,
+                              onDelete
                           }) => {
     const {register, control, handleSubmit} = useForm();
 
@@ -35,7 +36,7 @@ const EditFeedbackForm = ({
                             control={control}
                             render={({field}) => (
                                 <Select options={categories}
-                                        defaultValue={categories.filter((item) => item.label === category.name)[0]}
+                                        defaultValue={categories.filter((item) => item.value === category.id)[0]}
                                         {...field}
                                 />
                             )}
@@ -48,8 +49,8 @@ const EditFeedbackForm = ({
                 <Controller name={'status'}
                             control={control}
                             render={({field}) => (
-                                <Select options={status}
-                                        defaultValue={status.filter((item) => item.label === currentStatus.name)[0]}
+                                <Select options={statusList}
+                                        defaultValue={statusList.filter((item) => item.value === currentStatus.id)[0]}
                                         {...field}
                                 />
                             )}

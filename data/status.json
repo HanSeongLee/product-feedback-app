@@ -1,18 +1,18 @@
 [
   {
-    "label": "Suggestion",
-    "value": "suggestion"
+    "id": 1,
+    "name": "Suggestion"
   },
   {
-    "label": "Planned",
-    "value": "planned"
+    "id": 2,
+    "name": "Planned"
   },
   {
-    "label": "In-Progress",
-    "value": "in-progress"
+    "id": 3,
+    "name": "In-Progress"
   },
   {
-    "label": "Live",
-    "value": "live"
+    "id": 4,
+    "name": "Live"
   }
 ]
