@@ -1,0 +1,29 @@
+@import "styles/utils";
+
+.header {
+  height: 100px;
+  background: #373F68;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #FFFFFF;
+  padding: 26px 24px;
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 3px;
+
+    button {
+      color: #FFFFFF;
+
+      svg path {
+        stroke: #CDD2EE;
+      }
+    }
+
+    .title {
+      @include h3;
+    }
+  }
+}
