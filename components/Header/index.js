@@ -1,7 +1,14 @@
-import React from "react";
+import React, {useCallback, useState} from "react";
 import styles from './style.module.scss';
+import Menu from "../Menu";
 
 const Header = () => {
+    const [openMenu, setOpenMenu] = useState(false);
+
+    const onMenuOpen = useCallback(() => {
+        setOpenMenu(!openMenu);
+    }, [openMenu]);
+
     return (
         <header className={styles.header}>
             <div>
@@ -14,11 +21,13 @@ const Header = () => {
             </div>
 
             <button className={styles.menuButton}
+                    onClick={onMenuOpen}
             >
-                <img src={'/icons/mobile/icon-hamburger.svg'}
+                <img src={`/icons/mobile/${openMenu ? 'icon-close' : 'icon-hamburger'}.svg`}
                      alt={'menu'}
                 />
             </button>
+            {openMenu && <Menu open={openMenu} />}
         </header>
     );
 };
