@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useState} from "react";
 import styles from './style.module.scss';
 import cn from 'classnames';
 import ArrowDownIcon from '/public/icons/icon-arrow-down.svg';
+import ClickAwayListener from "../ClickAwayListener";
 
 const Select = ({ label, options, defaultValue, onChange, variants='normal' }) => {
     const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -55,6 +56,7 @@ const Select = ({ label, options, defaultValue, onChange, variants='normal' }) =
                     </li>
                 ))}
             </ul>
+            {open && <ClickAwayListener />}
         </div>
     );
 };
