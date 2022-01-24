@@ -1,0 +1,67 @@
+@import "styles/utils";
+
+.feedback {
+  .body {
+    @include body3;
+
+    .title {
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: bold;
+      color: #3A4374;
+      margin-bottom: 9px;
+    }
+
+    .description {
+      font-weight: normal;
+      color: #647196;
+      margin-bottom: 8px;
+    }
+
+    .categoryContainer {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: 8px;
+
+      .categoryItem {
+        color: #4661E6;
+        background: #F2F4FF;
+        border-radius: 10px;
+        padding: 5px 16px 6px;
+      }
+    }
+  }
+
+  .footer {
+    @include body3;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+
+    .upvoteButton {
+      font-weight: inherit;
+      display: flex;
+      align-items: center;
+      padding: 6px 13px 7px 16px;
+      border: none;
+      background: #F2F4FE;
+      border-radius: 10px;
+      color: #3A4374;
+      cursor: pointer;
+
+      .arrowUpIcon {
+        margin-right: 8px;
+      }
+    }
+
+    .commentCount {
+      display: flex;
+      align-items: center;
+
+      .commentIcon {
+        margin-right: 8px;
+      }
+    }
+  }
+}
