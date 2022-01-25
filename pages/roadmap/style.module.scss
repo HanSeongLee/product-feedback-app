@@ -1,0 +1,10 @@
+
+.roadmapColumnContainer {
+  padding: 32px 24px;
+
+  .roadmapContainer {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+  }
+}

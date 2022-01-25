@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './style.module.scss';
 import Button from "../Button";
+import Link from 'next/link';
 
 const categories = [
     'All', 'UI', 'UX', 'Enhancement', 'Bug', 'Feature'
@@ -43,9 +44,13 @@ const Menu = () => {
                             Roadmap
                         </h2>
                         <div className={styles.viewButton}>
-                            <Button variants={'link'}>
-                                View
-                            </Button>
+                            <Link href={'/roadmap'}>
+                                <a>
+                                    <Button variants={'link'}>
+                                        View
+                                    </Button>
+                                </a>
+                            </Link>
                         </div>
                     </div>
                     <ul className={styles.roadmapList}>
