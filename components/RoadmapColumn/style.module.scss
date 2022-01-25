@@ -1,0 +1,16 @@
+@import "styles/utils";
+
+.column {
+  .title {
+    @include h3;
+    color: #3A4374;
+    margin-bottom: 4px;
+  }
+
+  .description {
+    @include body3;
+    font-weight: normal;
+    color: #647196;
+    margin-bottom: 24px;
+  }
+}
