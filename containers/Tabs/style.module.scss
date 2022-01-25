@@ -1,0 +1,47 @@
+@import "styles/utils";
+
+.menu {
+  @include body3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(58, 67, 116, 0.4);
+  list-style: none;
+
+  .menuItem {
+    flex: 1;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(140, 146, 179, 0.25);
+    cursor: pointer;
+
+    &.active {
+      position: relative;
+      color: #3A4374;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--color);
+        content: "";
+      }
+    }
+  }
+}
+
+.paneContainer {
+  list-style: none;
+
+  .pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
