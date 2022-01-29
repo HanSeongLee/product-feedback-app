@@ -29,6 +29,7 @@ model Status {
     id                   Int         @id @default(autoincrement())
     name                 String      @unique
     color                String
+    isRoadmap            Boolean
     productRequests      ProductRequest[]
 }
 

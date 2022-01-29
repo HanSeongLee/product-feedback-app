@@ -2,21 +2,25 @@
   {
     "id": 1,
     "name": "Suggestion",
-    "color": "#000000"
+    "color": "#000000",
+    "isRoadmap": false
   },
   {
     "id": 2,
     "name": "Planned",
-    "color": "#F49F85"
+    "color": "#F49F85",
+    "isRoadmap": true
   },
   {
     "id": 3,
     "name": "In-Progress",
-    "color": "#AD1FEA"
+    "color": "#AD1FEA",
+    "isRoadmap": true
   },
   {
     "id": 4,
     "name": "Live",
-    "color": "#62BCFA"
+    "color": "#62BCFA",
+    "isRoadmap": true
   }
 ]
