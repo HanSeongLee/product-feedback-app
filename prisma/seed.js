@@ -29,9 +29,16 @@ async function main() {
         return {
             ...request,
             comments: {
-                create: [
-                    ...request.comments,
-                ]
+                create: request.comments.map((comment) => {
+                        return {
+                            ...comment,
+                            replies: {
+                                create: [
+                                    ...comment.replies || [],
+                                ]
+                            }
+                        }
+                    })
             }
         }
     });

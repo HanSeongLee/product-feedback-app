@@ -33,13 +33,16 @@ model Status {
 
 model Comment {
     id                  Int             @id @default(autoincrement())
-    content             String
+    content             String          @db.LongText
     replyingToId        Int?
     replyingTo          User?           @relation("ReplyingTos", fields: [replyingToId], references: [id])
     userId              Int
     user                User            @relation("Comments", fields: [userId], references: [id])
     productRequestId    Int
     productRequest      ProductRequest  @relation(fields: [productRequestId], references: [id])
+    parentCommentId     Int?
+    parentComment       Comment?        @relation("ParentComments", fields: [parentCommentId], references: [id])
+    replies             Comment[]       @relation("ParentComments")
 }
 
 model ProductRequest {
