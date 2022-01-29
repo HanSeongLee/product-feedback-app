@@ -1,18 +1,22 @@
 [
   {
     "id": 1,
-    "name": "Suggestion"
+    "name": "Suggestion",
+    "color": "#000000"
   },
   {
     "id": 2,
-    "name": "Planned"
+    "name": "Planned",
+    "color": "#F49F85"
   },
   {
     "id": 3,
-    "name": "In-Progress"
+    "name": "In-Progress",
+    "color": "#AD1FEA"
   },
   {
     "id": 4,
-    "name": "Live"
+    "name": "Live",
+    "color": "#62BCFA"
   }
 ]
