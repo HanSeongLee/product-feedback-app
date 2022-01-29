@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "Add tags for solutions",
+    "categoryId": 3,
+    "upvotes": 112,
+    "statusId": 1,
+    "description": "Easier to search for solutions based on a specific stack.",
+    "comments": [
+      {
+        "id": 1,
+        "content": "Awesome idea! Trying to find framework-specific projects within the hubs can be tedious",
+        "userId": 2
+      },
+      {
+        "id": 2,
+        "content": "Please use fun, color-coded labels to easily identify them at a glance",
+        "userId": 3
+      }
+    ]
+  }
+]
