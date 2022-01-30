@@ -4,7 +4,7 @@ import ArrowUpIcon from "../../public/icons/icon-arrow-up.svg";
 import CommentIcon from "../../public/icons/icon-comments.svg";
 
 const Feedback = ({ id, title, description, categories,
-                      upvoteCount, commentCount, onUpvote }) => {
+                      upvotes: upvoteCount, _count: { comments: commentCount }, onUpvote }) => {
     return (
         <div className={styles.feedback}>
             <div className={styles.body}>
